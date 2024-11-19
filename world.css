@@ -1,1 +1,87 @@
-/* Add your own styles */
+* {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  height: 200vh;
+  margin: 0;
+}
+
+header {
+  background-color: #455a64;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#country {
+  height: 40px;
+  width: 700px;
+  border-radius: 5px;
+  border: none;
+  text-indent: 15px;
+}
+
+#lookup {
+  background-color: darkturquoise;
+  color: whitesmoke;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#lookup:hover {
+  background-color: #009688; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+#lookup:active {
+  background-color: #00796b; /* Even darker shade when clicked */
+  transform: scale(1); /* Reset scale when clicked */
+}
+
+#lookupCitiesButton {
+  background-color: #007bff; /* Blue color */
+  color: whitesmoke;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#lookupCitiesButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+#lookupCitiesButton:active {
+  background-color: #003f7f; /* Even darker blue when clicked */
+  transform: scale(1); /* Reset scale when clicked */
+}
+
+  
+  
+  
+  
