@@ -1,12 +1,13 @@
 // Wait for the DOM content to be fully loaded before executing the script
 console.log("Script loaded");
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // Get references to HTML elements
     var lookupButton = document.getElementById("lookup");
     var lookupCitiesButton = document.getElementById("lookupCities");
     var result = document.getElementById("result");
-    var searchValue = document.getElementById("country");
+    var searchValue = document.getElementById("country");  // Ensure the correct ID is used
 
     // Declare the XMLHttpRequest object
     var Req;
@@ -16,8 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
         // Initialize the XMLHttpRequest object
         Req = new XMLHttpRequest();
 
+        // Get the value of the country input
+        var country = searchValue.value;
+
+        // Check if country value is empty
+        if (!country) {
+            alert('Please enter a country name.');
+            return;
+        }
+
         // Construct the URL for the Ajax request, including the country and lookup parameters
-        var url = "http://localhost/comp2245-assignment5/world.php?country=" + encodeURIComponent(searchValue.value) + "&lookup=" + lookupType;
+        var url = "http://localhost/comp2245-assignment5/world.php?country=" + encodeURIComponent(country) + "&lookup=" + lookupType;
+
+        console.log("Request URL:", url);  // Log the URL for debugging
 
         // Open a GET request to the specified URL
         Req.open('GET', url);
@@ -51,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 result.innerHTML = Req.responseText;
             } else {
                 // Alert the user if there was an error
-                alert('Error');
+                alert('Error: ' + Req.status);
             }
         }
     }
